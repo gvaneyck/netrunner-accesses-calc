@@ -1,0 +1,149 @@
+[gd_scene format=3 uid="uid://b4wl127p00p4s"]
+
+[ext_resource type="Script" uid="uid://baova57rm4fja" path="res://panel.gd" id="1_y26ic"]
+[ext_resource type="Script" uid="uid://dsk3dy0hjms0p" path="res://chart.gd" id="2_ikblc"]
+
+[node name="Panel" type="Control" unique_id=1687692140]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_y26ic")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=351291379]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer" unique_id=1455596665]
+layout_mode = 2
+
+[node name="GridContainer" type="GridContainer" parent="VBoxContainer/HBoxContainer" unique_id=66100131]
+layout_mode = 2
+columns = 4
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer/GridContainer" unique_id=2077737894]
+layout_mode = 2
+text = "1 pt"
+horizontal_alignment = 2
+
+[node name="OnePt" type="SpinBox" parent="VBoxContainer/HBoxContainer/GridContainer" unique_id=468424632]
+unique_name_in_owner = true
+layout_mode = 2
+max_value = 20.0
+rounded = true
+
+[node name="Blank" type="Control" parent="VBoxContainer/HBoxContainer/GridContainer" unique_id=2062340327]
+layout_mode = 2
+
+[node name="Blank2" type="Control" parent="VBoxContainer/HBoxContainer/GridContainer" unique_id=1049013980]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="VBoxContainer/HBoxContainer/GridContainer" unique_id=1377417987]
+layout_mode = 2
+text = "2 pt"
+horizontal_alignment = 2
+
+[node name="TwoPt" type="SpinBox" parent="VBoxContainer/HBoxContainer/GridContainer" unique_id=182971108]
+unique_name_in_owner = true
+layout_mode = 2
+max_value = 20.0
+rounded = true
+
+[node name="Label3" type="Label" parent="VBoxContainer/HBoxContainer/GridContainer" unique_id=1704666102]
+layout_mode = 2
+text = " LTD"
+horizontal_alignment = 2
+
+[node name="LTD" type="SpinBox" parent="VBoxContainer/HBoxContainer/GridContainer" unique_id=1893295761]
+unique_name_in_owner = true
+layout_mode = 2
+max_value = 0.0
+rounded = true
+
+[node name="Label4" type="Label" parent="VBoxContainer/HBoxContainer/GridContainer" unique_id=1227566373]
+layout_mode = 2
+text = "3 pt"
+horizontal_alignment = 2
+
+[node name="ThreePt" type="SpinBox" parent="VBoxContainer/HBoxContainer/GridContainer" unique_id=497622075]
+unique_name_in_owner = true
+layout_mode = 2
+max_value = 20.0
+rounded = true
+
+[node name="Label5" type="Label" parent="VBoxContainer/HBoxContainer/GridContainer" unique_id=1137830525]
+layout_mode = 2
+text = "GFI"
+horizontal_alignment = 2
+
+[node name="GFI" type="SpinBox" parent="VBoxContainer/HBoxContainer/GridContainer" unique_id=1109593736]
+unique_name_in_owner = true
+layout_mode = 2
+max_value = 0.0
+rounded = true
+
+[node name="Label6" type="Label" parent="VBoxContainer/HBoxContainer/GridContainer" unique_id=1483783563]
+layout_mode = 2
+text = "-1 pt"
+horizontal_alignment = 2
+
+[node name="NegPt" type="SpinBox" parent="VBoxContainer/HBoxContainer/GridContainer" unique_id=1345649406]
+unique_name_in_owner = true
+layout_mode = 2
+max_value = 20.0
+rounded = true
+
+[node name="Blank3" type="Control" parent="VBoxContainer/HBoxContainer/GridContainer" unique_id=1711938463]
+layout_mode = 2
+
+[node name="Blank4" type="Control" parent="VBoxContainer/HBoxContainer/GridContainer" unique_id=866192138]
+layout_mode = 2
+
+[node name="Label7" type="Label" parent="VBoxContainer/HBoxContainer/GridContainer" unique_id=1949724473]
+layout_mode = 2
+text = "Deck"
+horizontal_alignment = 2
+
+[node name="DeckSize" type="SpinBox" parent="VBoxContainer/HBoxContainer/GridContainer" unique_id=361919235]
+unique_name_in_owner = true
+layout_mode = 2
+max_value = 4.0
+value = 4.0
+rounded = true
+
+[node name="Label8" type="Label" parent="VBoxContainer/HBoxContainer/GridContainer" unique_id=1190008588]
+layout_mode = 2
+text = "Win @"
+horizontal_alignment = 2
+
+[node name="WinAt" type="SpinBox" parent="VBoxContainer/HBoxContainer/GridContainer" unique_id=2047017405]
+unique_name_in_owner = true
+layout_mode = 2
+max_value = 20.0
+value = 7.0
+rounded = true
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer" unique_id=314034271]
+layout_mode = 2
+text = "LTD = Let Them Dream
+GFI = Global Food Initiative
+Adjust \"Win @\" to account for
+the runner scoring points with
+their cards or forfeiting
+agendas"
+
+[node name="Calc" type="Button" parent="VBoxContainer" unique_id=488013976]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Calculate"
+
+[node name="Chart" type="Control" parent="VBoxContainer" unique_id=287914286]
+unique_name_in_owner = true
+layout_mode = 2
+script = ExtResource("2_ikblc")
