@@ -91,8 +91,8 @@ func calculate() -> void:
     var prs: Array[float] = []
     prs.resize(wins.size())
     for i: int in range(wins.size()):
-        # Wins * chance of game taking this long + chance of winning previously
-        prs[i] = (wins[i] * games[i] + (1 - games[i])) * 100
+        # Wins + chance of winning previously
+        prs[i] = (wins[i] + (1 - games[i])) * 100
         print("%d %1.3f" % [i, prs[i]])
     chartCtrl.update_chart(prs)
     print("%d states processed" % [states.size()])
